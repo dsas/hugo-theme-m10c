@@ -7,6 +7,14 @@
     border-left: 0.4em solid rgba($primary-color, .8);
     padding-left: 1em;
   }
+
+  blockquote {
+    font-style:italic;
+    border-left: 4px solid $light-color;
+    padding-left: 15px;
+    letter-spacing:-1px;
+    color: $lightest-color;
+  }
 }
 
 .post-meta {
