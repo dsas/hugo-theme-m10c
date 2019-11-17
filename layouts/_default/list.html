@@ -3,6 +3,7 @@
     <h1>{{ .Title }}</h1>
     <ul class="posts-list">
       {{ range $index, $element := .Paginator.Pages }}
+        {{ if eq .Type "post" }}
         <li class="posts-list-item">
           <a class="posts-list-item-title" href="{{ .Permalink }}">{{ .Title }}</a>
           <span class="posts-list-item-description">
@@ -10,6 +11,7 @@
             {{ .PublishDate.Format "Jan 2, 2006" }}
           </span>
         </li>
+      {{ end }}
       {{ end }}
     </ul>
     {{ partial "pagination.html" $ }}
