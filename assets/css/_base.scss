@@ -47,6 +47,12 @@ pre {
   overflow: auto;
 }
 
+// The html5 default of h1s inside articles and section doesn't really work well
+// when markdown doesn't allow use of <section> elements in article content
+article h1 {
+  font-size:2em;
+}
+
 ::selection {
   background: rgba($light-color, .25);
 }
